@@ -33,32 +33,5 @@
       })();
     </script>
   </head>
-  <body>
-    <atomic-search-interface id="search">
-      <div class="interface-container">
-        <atomic-search-box></atomic-search-box>
-        <atomic-facet-manager>
-          <atomic-facet field="author" label="Authors"> </atomic-facet>
-          <atomic-numeric-facet field="size" label="File Sizes">
-            <atomic-numeric-range start="0" end="10" end-inclusive="true">
-            </atomic-numeric-range>
-          </atomic-numeric-facet>
-          <atomic-date-facet
-            date-format="MMM D. YYYY"
-            field="date"
-            label="Date"
-          >
-            <atomic-date-range
-              start="Jan 1, 2010"
-              end="Dec 31, 2015"
-            ></atomic-date-range>
-            <atomic-date-range
-              start="Jan 1, 2016"
-              end="Dec 31, 2021"
-            ></atomic-date-range>
-          </atomic-date-facet>
-        </atomic-facet-manager>
-      </div>
-    </atomic-search-interface>
-  </body>
+  <body></body>
 </html>
