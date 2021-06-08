@@ -36,30 +36,28 @@
   <body>
     <atomic-search-interface id="search">
       <div class="header"></div>
-        <atomic-search-box></atomic-search-box>
-        <atomic-facet-manager>
-          <atomic-facet field="author" label="Authors"> </atomic-facet>
-          <atomic-numeric-facet field="size" label="File Sizes">
-            <atomic-numeric-range start="0" end="10" end-inclusive="true">
-            </atomic-numeric-range>
-          </atomic-numeric-facet>
-          <atomic-date-facet
-            date-format="MMM D, YYYY"
-            field="date"
-            label="Date"
-          >
-            <atomic-date-range start="Jan 1, 2010" end="Dec 31, 2015">
-            </atomic-date-range>
-            <atomic-date-range start="Jan 1, 2016" end="Dec 31, 2021">
-            </atomic-date-range>
-          </atomic-date-facet>
-          <atomic-category-facet
-            field="geographicalhierarchy"
-            label="World Atlas"
-            enable-facet-search="true"
-          >
-          </atomic-category-facet>
-        </atomic-facet-manager>
+      <atomic-search-box></atomic-search-box>
+      <atomic-facet-manager>
+        <atomic-facet field="author" label="Authors"> </atomic-facet>
+        <atomic-numeric-facet field="size" label="File Sizes">
+          <atomic-numeric-range start="0" end="10" end-inclusive="true">
+          </atomic-numeric-range>
+        </atomic-numeric-facet>
+        <atomic-date-facet date-format="MMM D, YYYY" field="date" label="Date">
+          <atomic-date-range start="Jan 1, 2010" end="Dec 31, 2015">
+          </atomic-date-range>
+          <atomic-date-range start="Jan 1, 2016" end="Dec 31, 2021">
+          </atomic-date-range>
+        </atomic-date-facet>
+        <atomic-category-facet
+          field="geographicalhierarchy"
+          label="World Atlas"
+          enable-facet-search="true"
+        >
+        </atomic-category-facet>
+      </atomic-facet-manager>
+      <div class="results-container">
+        <atomic-result-list></atomic-result-list>
       </div>
     </atomic-search-interface>
   </body>
