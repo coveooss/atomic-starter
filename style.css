@@ -1,0 +1,31 @@
+atomic-search-interface {
+  grid-template-columns: 1fr minmax(150px, 325px) minmax(500px, 925px) 1fr;
+  grid-template-rows: 22px 50px 22px 1fr;
+  column-gap: 20px;
+  display: grid;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: var(--atomic-neutral-light);
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 3;
+}
+
+atomic-search-box {
+  grid-column: 3 / auto;
+  grid-row: 2 / auto;
+  max-width: 650px;
+}
+
+atomic-facet-manager {
+  grid-column: 2 / auto;
+  grid-row: 4 / auto;
+  margin-top: 15px;
+}
+
+.results-container {
+  grid-column: 3 / auto;
+  grid-row: 4 / auto;
+  margin-top: 15px;
+}
