@@ -90,7 +90,13 @@
         </atomic-category-facet>
       </atomic-facet-manager>
       <div class="results-container">
-        <atomic-result-list></atomic-result-list>
+        <atomic-result-list fields-to-include="filetype">
+          <atomic-result-template id="YouTube" must-match-filetype="YouTubeVideo">
+            <template>
+              <h1>YouTube Result</h1>
+            </template>
+          </atomic-result-template>
+        </atomic-result-list>
       </div>
     </atomic-search-interface>
   </body>
