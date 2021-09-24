@@ -14,9 +14,8 @@
     ></script>
     <link
       rel="stylesheet"
-      href="https://static.cloud.coveo.com/atomic/latest/themes/default.css"
+      href="https://static.cloud.coveo.com/atomic/latest/themes/coveo.css"
     />
-    <link rel="stylesheet" href="https://use.typekit.net/bqa0xml.css" />
     <script>
       (async () => {
         await customElements.whenDefined("atomic-search-interface");
@@ -32,6 +31,23 @@
         searchInterface.executeFirstSearch();
       })();
     </script>
+    <style>
+      atomic-search-box {
+          grid-area: search;
+          margin: var(--spacing) 0;
+          max-width: var(--search-box-width);
+          height: 3rem;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <atomic-search-interface id="search">
+      <div class="header"></div>
+      <atomic-search-box></atomic-search-box>
+      <atomic-facet-manager>
+        <atomic-facet field="author" label="Authors" is-collapsed="true"> </atomic-facet>
+        <atomic-facet field="language" label="Language" is-collapsed="true"></atomic-facet>
+      </atomic-facet-manager>
+    </atomic-search-interface>
+  </body>
 </html>
