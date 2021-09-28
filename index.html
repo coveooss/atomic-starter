@@ -114,12 +114,16 @@
             </atomic-result-section-excerpt>
             <atomic-result-section-bottom-metadata>
               <atomic-result-fields-list>
-              <span class="field-label">
-                <atomic-text value="author"></atomic-text>:
-              </span>
-              <span class="field-label">
-                <atomic-text value="source"></atomic-text>:
-              </span>
+                <atomic-field-condition class="field" if-defined="author">
+                  <span class="field-label"
+                    ><atomic-text value="author"></atomic-text>:</span>
+                  <atomic-result-text field="author"></atomic-result-text>
+                </atomic-field-condition>
+                <atomic-field-condition class="field" if-defined="source">
+                  <span class="field-label"></span>
+                    <atomic-text value="source"></atomic-text>:</span>
+                  <atomic-result-text field="source"></atomic-result-text>
+                </atomic-field-condition>
             </atomic-result-fields-list>
             </atomic-result-section-bottom-metadata>
           </template>
