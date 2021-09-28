@@ -24,7 +24,7 @@
         // Initialization
         await searchInterface.initialize({
           accessToken: "xx564559b1-0045-48e1-953c-3addd1ee4457",
-          organizationId: "searchuisamples",
+          organizationId: "searchuisamples"
         });
 
         // Trigger a first search
@@ -33,15 +33,10 @@
     </script>
     <style>
       atomic-search-box {
-          grid-area: search;
-          margin: var(--spacing) 0;
-          max-width: var(--search-box-width);
-          height: 3rem;
-      }
-
-      .field-label {
-                  font-weight: bold;
-                  margin-right: 0.25rem;
+        grid-area: search;
+        margin: var(--spacing) 0;
+        max-width: var(--search-box-width);
+        height: 3rem;
       }
     </style>
   </head>
@@ -50,8 +45,13 @@
       <div class="header"></div>
       <atomic-search-box></atomic-search-box>
       <atomic-facet-manager>
-        <atomic-facet field="author" label="Authors" is-collapsed="true"> </atomic-facet>
-        <atomic-facet field="language" label="Language" is-collapsed="true"></atomic-facet>
+        <atomic-facet field="author" label="Authors" is-collapsed="true">
+        </atomic-facet>
+        <atomic-facet
+          field="language"
+          label="Language"
+          is-collapsed="true"
+        ></atomic-facet>
         <atomic-numeric-facet
           field="ytlikecount"
           label="Youtube Likes"
@@ -79,15 +79,19 @@
             label="Treasured"
           ></atomic-numeric-range>
         </atomic-numeric-facet>
-        <atomic-timeframe-facet label="Timeframe" with-date-picker="true" is-collapsed="true"> <3>
-          <atomic-timeframe unit="hour"></atomic-timeframe> <4>
+        <atomic-timeframe-facet
+          label="Timeframe"
+          with-date-picker="true"
+          is-collapsed="true"
+        >
+          <3> <atomic-timeframe unit="hour"></atomic-timeframe> <4>
           <atomic-timeframe unit="day"></atomic-timeframe>
           <atomic-timeframe unit="week"></atomic-timeframe>
           <atomic-timeframe unit="month"></atomic-timeframe>
           <atomic-timeframe unit="quarter"></atomic-timeframe>
           <atomic-timeframe unit="year"></atomic-timeframe>
-      </atomic-timeframe-facet>
-      <atomic-category-facet
+        </atomic-timeframe-facet>
+        <atomic-category-facet
           field="geographicalhierarchy"
           label="World Atlas"
           with-search="true"
@@ -95,47 +99,40 @@
         ></atomic-category-facet>
       </atomic-facet-manager>
       <atomic-breadbox></atomic-breadbox>
-      <atomic-result-list
-        fields-to-include="snrating,sncost"
-        display="list"
-        image="icon"
+      <div class="results">
+        <atomic-result-list
+          fields-to-include="snrating,sncost"
+          display="list"
+          image="icon"
         >
-        <atomic-result-template>
-          <template>
-            <atomic-result-section-visual>
-              <atomic-result-icon class="icon"></atomic-result-icon>
-            </atomic-result-section-visual>
-            <atomic-result-section-badges>
-              <atomic-result-badge
-                field="language"
-                icon="https://raw.githubusercontent.com/Rush/Font-Awesome-SVG-PNG/master/black/svg/language.svg"
-              ></atomic-result-badge>
-            </atomic-result-section-badges>
-            <atomic-result-section-title>
-              <atomic-result-link target="_blank"></atomic-result-link>
-            </atomic-result-section-title>
-            <atomic-result-section-excerpt>
-              <atomic-result-text field="excerpt"></atomic-result-text>
-            </atomic-result-section-excerpt>
-            <atomic-result-section-bottom-metadata>
-              <atomic-result-fields-list>
-                <atomic-field-condition class="field" if-defined="author">
-                  <span class="field-label">
-                    <atomic-text value="author"></atomic-text>:
-                  </span>
-                  <atomic-result-text field="author"></atomic-result-text>
+          <atomic-result-template>
+            <template>
+              <atomic-result-section-visual>
+                <atomic-result-icon class="icon"></atomic-result-icon>
+              </atomic-result-section-visual>
+              <atomic-result-section-badges>
+                <atomic-result-badge
+                  field="language"
+                  icon="https://raw.githubusercontent.com/Rush/Font-Awesome-SVG-PNG/master/black/svg/language.svg"
+                ></atomic-result-badge>
+              </atomic-result-section-badges>
+              <atomic-result-section-title>
+                <atomic-result-link target="_blank"></atomic-result-link>
+              </atomic-result-section-title>
+              <atomic-result-section-title-metadata>
+                <atomic-field-condition class="field" if-defined="snrating">
+                  <atomic-result-rating field="snrating"></atomic-result-rating>
                 </atomic-field-condition>
-                <atomic-field-condition class="field" if-defined="source">
-                  <span class="field-label">
-                    <atomic-text value="source"></atomic-text>:
-                  </span>
-                  <atomic-result-text field="source"></atomic-result-text>
+                <atomic-field-condition class="field" if-not-defined="snrating">
+                  <atomic-result-printable-uri
+                    max-number-of-parts="3"
+                  ></atomic-result-printable-uri>
                 </atomic-field-condition>
-            </atomic-result-fields-list>
-            </atomic-result-section-bottom-metadata>
-          </template>
-        </atomic-result-template>
-      </atomic-result-list>
+              </atomic-result-section-title-metadata>
+            </template>
+          </atomic-result-template>
+        </atomic-result-list>
+      </div>
     </atomic-search-interface>
   </body>
 </html>
