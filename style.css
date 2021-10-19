@@ -1,138 +1,134 @@
-
 :root {
-    --spacing: 16px;
-    --search-box-width: 50%px;
-    --atomic-primary: rgb(136, 136, 136);
-    --atomic-font-family: "Comic Sans MS", "Comic Sans", cursive;
-    }
-    
-    body {
-    margin: 0;
-    }
-    
-    body.atomic-modal-opened {
-    overflow-y: hidden;
-    }
-    
-    atomic-search-interface {
-    display: grid;
-    grid-template-columns: var(--spacing) 1fr var(--spacing);
+  --spacing: 16px;
+  --search-box-width: 50%px;
+  --atomic-primary: rgb(136, 136, 136);
+  --atomic-font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+body {
+  margin: 0;
+}
+
+body.atomic-modal-opened {
+  overflow-y: hidden;
+}
+
+atomic-search-interface {
+  display: grid;
+  grid-template-columns: var(--spacing) 1fr var(--spacing);
+  grid-template-areas:
+    ". search      ."
+    ". status      ."
+    ". breadbox    ."
+    ". topbar      ."
+    ". results     ."
+    ". pagination  ."
+    ". .           .";
+}
+
+.searchbox {
+  background-color: gainsboro;
+  grid-area: 1 / -1 / 1 / 1;
+}
+
+atomic-sort-dropdown {
+  display: none;
+}
+
+atomic-search-box {
+  grid-area: search;
+  margin: var(--spacing) auto;
+  max-width: 75%;
+  height: 3rem;
+}
+
+atomic-search-box::part(submit-button) {
+  background-color: red;
+  border: 1px solid black;
+}
+
+atomic-search-box::part(input) {
+  border: 1px solid black;
+}
+
+.status {
+  grid-area: status;
+}
+
+atomic-facet-manager {
+  display: none;
+}
+
+atomic-breadbox {
+  grid-area: breadbox;
+  margin-top: var(--spacing);
+  padding-bottom: var(--spacing);
+  border-bottom: 1px solid var(--atomic-neutral);
+}
+
+.topbar {
+  grid-area: topbar;
+  margin: var(--spacing) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.results {
+  grid-area: results;
+}
+
+.pagination {
+  grid-area: pagination;
+  margin: var(--spacing) 0;
+}
+
+.atomic-search-interface-no-results .topbar,
+.atomic-search-interface-no-results .results,
+.atomic-search-interface-no-results .pagination {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  atomic-search-interface {
+    column-gap: var(--spacing);
+    grid-template-columns: 1fr minmax(150px, 325px) minmax(500px, 1100px) 1fr;
     grid-template-areas:
-        ". search      ."
-        ". status      ."
-        ". breadbox    ."
-        ". topbar      ."
-        ". results     ."
-        ". pagination  ."
-        ". .           .";
-    }
-    
-    .searchbox {
-    background-color: gainsboro;
-    grid-area: 1 / -1 / 1 / 1;
-    }
-    
-    atomic-facet-manager {
-    display: none;
-    }
-    
-    atomic-sort-dropdown {
-    display: none;
-    }
-    
-    atomic-search-box {
-    grid-area: search;
-    margin: var(--spacing) 0;
-    max-width: var(--search-box-width);
-    height: 3rem;
-    }
-    
-    atomic-search-box::part(submit-button){
-    background-color:red ;
-    border: 1px solid black ;
-    }
-    
-    atomic-search-box::part(input) {
-    border: 1px solid black;
-    }
-    
-    .status {
-    grid-area: status;
-    }
-    
-    
-    
-    atomic-breadbox {
-    grid-area: breadbox;
+      ". search search      ."
+      ". .      breadbox    ."
+      ". .      topbar      ."
+      ". facets results     ."
+      ". facets pagination  ."
+      ". facets status      ."
+      ". facets .           .";
+  }
+
+  atomic-facet-manager {
+    display: block;
+    border-radius: 20px;
+    grid-area: facets;
     margin-top: var(--spacing);
-    padding-bottom: var(--spacing);
-    border-bottom: 1px solid var(--atomic-neutral);
-    }
-    
-    .topbar {
-    grid-area: topbar;
-    margin: var(--spacing) 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    }
-    
-    .results {
-    grid-area: results;
-    }
-    
-    .pagination {
-    grid-area: pagination;
-    margin: var(--spacing) 0;
-    }
-    
-    .atomic-search-interface-no-results .topbar,
-    .atomic-search-interface-no-results .results,
-    .atomic-search-interface-no-results .pagination {
+    background-color: gainsboro;
+    padding: 1em;
+  }
+
+  atomic-facet-manager > * {
+    margin-bottom: var(--spacing);
+  }
+
+  atomic-refine-toggle {
     display: none;
-    }
-    
-    
-    @media only screen and (min-width: 1024px) {
-        atomic-search-interface {
-            column-gap: var(--spacing);
-            grid-template-columns: 1fr minmax(150px, 325px) minmax(500px, 1100px) 1fr;
-            grid-template-areas:
-            ". search search      ."
-            ". .      breadbox    ."
-            ". .      topbar      ."
-            ". facets results     ."
-            ". facets pagination  ."
-            ". facets status      ."
-            ". facets .           .";
-        }
-    
-        atomic-facet-manager {
-            display: block;
-            border-radius: 20px;
-            grid-area: facets;
-            margin-top: var(--spacing);
-            background-color: gainsboro;
-            padding: 1em;
-            }
-    
-        atomic-facet-manager > * {
-            margin-bottom: var(--spacing);
-        }
-    
-        atomic-refine-toggle {
-            display: none;
-        }
-    
-        atomic-sort-dropdown {
-            display: block;
-        }
-    
-        .status {
-            max-width: var(--search-box-width);
-        }
-    
-        atomic-result-link::part(result-link) {
-        color: red;
-        }
-    }
+  }
+
+  atomic-sort-dropdown {
+    display: block;
+  }
+
+  .status {
+    max-width: var(--search-box-width);
+  }
+
+  atomic-result-link::part(result-link) {
+    color: red;
+  }
+}
