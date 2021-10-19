@@ -60,16 +60,7 @@ border: 1px solid black;
 grid-area: status;
 }
 
-atomic-facet-manager {
-grid-area: facets;
-margin-top: var(--spacing);
-background-color: gainsboro;
-padding: 1em;
-}
 
-atomic-facet-manager > * {
-margin-bottom: var(--spacing);
-}
 
 atomic-breadbox {
 grid-area: breadbox;
@@ -119,6 +110,14 @@ display: none;
     atomic-facet-manager {
         display: block;
         border-radius: 20px;
+        grid-area: facets;
+        margin-top: var(--spacing);
+        background-color: gainsboro;
+        padding: 1em;
+        }
+
+    atomic-facet-manager > * {
+        margin-bottom: var(--spacing);
     }
 
     atomic-refine-toggle {
