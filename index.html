@@ -24,9 +24,18 @@
       })();
     </script>
   </head>
-
   <body>
     <atomic-search-interface id="search">
+      <div class="searchbox">
+        <atomic-search-box></atomic-search-box>
+      </div>
+      <div class="results">
+        <atomic-result-list></atomic-result-list>
+      </div>
+      <div class="pagination">
+        <atomic-pager></atomic-pager>
+        <atomic-results-per-page></atomic-results-per-page>
+      </div>
     </atomic-search-interface>
   </body>
 </html>
