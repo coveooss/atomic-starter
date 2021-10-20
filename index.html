@@ -55,6 +55,18 @@
       </atomic-facet-manager>
       <div class="topbar">
         <atomic-refine-toggle></atomic-refine-toggle>
+        <atomic-sort-dropdown>
+          <atomic-sort-expression
+          label="Relevance"
+          expression="relevancy, ytlikecount descending"
+          >
+          </atomic-sort-expression>
+          <atomic-sort-expression
+          label="Date"
+          expression="date descending"
+          >
+          </atomic-sort-expression>
+        </atomic-sort-dropdown>
       </div>
       <div class="results">
         <atomic-result-list
