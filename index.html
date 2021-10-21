@@ -33,7 +33,6 @@
     <atomic-search-interface id="search">
       <div class="searchbox"></div>
       <atomic-search-box></atomic-search-box>
-      
         <atomic-facet-manager>
           <atomic-facet field="sourcetype" label="Source" is-collapsed="true"></atomic-facet>
           <atomic-facet field="language" label="Language" is-collapsed="true"></atomic-facet>
@@ -87,20 +86,12 @@
         <atomic-query-summary enable-duration="false"></atomic-query-summary>
         <atomic-sort-dropdown>
           <atomic-sort-expression
-          label="Relevance"
-          expression="relevancy"
-          ></atomic-sort-expression>
-          <atomic-sort-expression
-            label="views ascending"
-            expression="ytviewcount ascending"
-          ></atomic-sort-expression>
-          <atomic-sort-expression
-            label="date ascending"
-            expression="date ascending"
-          ></atomic-sort-expression>
-          <atomic-sort-expression
-          label="date descending"
+          label="Date"
           expression="date descending"
+          ></atomic-sort-expression>
+          <atomic-sort-expression
+          label="Popular Videos"
+          expression="ytlikecount descending"
           ></atomic-sort-expression>
         </atomic-sort-dropdown>
       </div>
@@ -268,7 +259,11 @@
       </div>
       <div class="status">
         <atomic-query-error></atomic-query-error>
-        <atomic-no-results></atomic-no-results>
+        <atomic-no-results>
+          <span>
+            <h2>Oooops! Can't find anything :(</h2>
+          </span>
+        </atomic-no-results>
       </div>
     </atomic-search-interface>
   </body>
