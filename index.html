@@ -53,7 +53,9 @@
           <atomic-timeframe unit="year"></atomic-timeframe>
         </atomic-timeframe-facet>
       </atomic-facet-manager>
+      <atomic-breadbox></atomic-breadbox>
       <div class="topbar">
+        <atomic-query-summary></atomic-query-summary>
         <atomic-refine-toggle></atomic-refine-toggle>
         <atomic-sort-dropdown>
           <atomic-sort-expression
@@ -69,6 +71,7 @@
         </atomic-sort-dropdown>
       </div>
       <div class="results">
+        <atomic-did-you-mean></atomic-did-you-mean>
         <atomic-result-list
           image="icon"
           density="compact"
@@ -125,6 +128,10 @@
       <div class="pagination">
         <atomic-pager></atomic-pager>
         <atomic-results-per-page></atomic-results-per-page>
+      </div>
+      <div class="status">
+        <atomic-query-error></atomic-query-error>
+        <atomic-no-results></atomic-no-results>
       </div>
     </atomic-search-interface>
   </body>
