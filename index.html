@@ -178,13 +178,13 @@
                 <atomic-result-section-visual>
                   <atomic-field-condition must-match-sourcetype="YouTube">
                     <atomic-result-image field="ytthumbnailurl"></atomic-result-image>
-                    <img class="result-icon" src="https://cdn.cdnlogo.com/logos/y/92/youtube.svg" />
+                    <img src="https://cdn.cdnlogo.com/logos/y/92/youtube.svg" />
                   </atomic-field-condition>
                   <atomic-field-condition must-match-sourcetype="RSS">
-                    <img class="result-icon" src="https://cdn.cdnlogo.com/logos/r/89/rss.svg"/>
+                    <img src="https://cdn.cdnlogo.com/logos/r/89/rss.svg"/>
                   </atomic-field-condition>
                   <atomic-field-condition must-match-sourcetype="Twitter2">
-                    <img class="result-icon" src="https://cdn.cdnlogo.com/logos/t/96/twitter-icon.svg"/>
+                    <img src="https://cdn.cdnlogo.com/logos/t/96/twitter-icon.svg"/>
                   </atomic-field-condition>
                 </atomic-result-section-visual>
               <atomic-result-section-badges>
@@ -216,7 +216,7 @@
                 ><atomic-result-link target="blank"></atomic-result-link
               ></atomic-result-section-title>
               <atomic-result-section-title-metadata>
-                <atomic-field-condition class="field" if-defined="ytviewrating">
+                <atomic-field-condition if-defined="ytviewrating">
                   <atomic-result-rating field="ytviewrating"></atomic-result-rating>
                 </atomic-field-condition>
               </atomic-result-section-title-metadata>
@@ -225,26 +225,26 @@
               ></atomic-result-section-excerpt>
               <atomic-result-section-bottom-metadata>
                 <atomic-result-fields-list>
-                  <atomic-field-condition class="field" if-defined="author">
-                    <span class="field-label"
+                  <atomic-field-condition if-defined="author">
+                    <span
                       ><atomic-text value="author"></atomic-text>:</span
                     >
                     <atomic-result-text field="author"></atomic-result-text>
                   </atomic-field-condition>
-                  <atomic-field-condition class="field" if-defined="ytlikecount">
-                    <span class="field-label"
+                  <atomic-field-condition if-defined="ytlikecount">
+                    <span
                       ><atomic-text value="YouTube Likes"></atomic-text>:</span
                     >
                     <atomic-result-number field="ytlikecount"></atomic-result-number>
                   </atomic-field-condition>
-                  <atomic-field-condition class="field" if-defined="ytviewcount">
-                    <span class="field-label"
+                  <atomic-field-condition if-defined="ytviewcount">
+                    <span
                       ><atomic-text value="YouTube Views"></atomic-text>:</span
                     >
                     <atomic-result-number field="ytviewcount"></atomic-result-number>
                   </atomic-field-condition>
-                  <span class="field">
-                    <span class="field-label">Date:</span>
+                  <span>
+                    <span>Date:</span>
                     <atomic-result-date></atomic-result-date>
                   </span>
                 </atomic-result-fields-list>
