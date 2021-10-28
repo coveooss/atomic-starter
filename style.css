@@ -2,7 +2,8 @@
   --spacing: 16px;
   --search-box-width: 50%px;
   --atomic-primary: rgb(136, 136, 136);
-  --atomic-font-family: "Comic Sans MS", "Comic Sans", cursive;
+  --atomic-font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
 }
 
 body {
