@@ -40,6 +40,7 @@ atomic-sort-dropdown {
   display: none;
 }
 
+
 atomic-search-box {
   grid-area: search;
   margin: var(--spacing) 0;
@@ -60,9 +61,11 @@ atomic-search-box::part(input) {
   grid-area: status;
 }
 
+
 atomic-breadbox {
   grid-area: breadbox;
   margin-top: var(--spacing);
+  margin-left: 8em;
   padding-bottom: var(--spacing);
   border-bottom: 1px solid var(--atomic-neutral);
 }
@@ -119,6 +122,14 @@ atomic-breadbox {
 
   atomic-refine-toggle {
     display: none;
+  }
+
+  atomic-breadbox {
+    grid-area: breadbox;
+    margin-top: var(--spacing);
+    margin-left: var(--spacing);
+    padding-bottom: var(--spacing);
+    border-bottom: 1px solid var(--atomic-neutral);
   }
 
   atomic-sort-dropdown {
