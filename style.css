@@ -40,7 +40,6 @@ atomic-sort-dropdown {
   display: none;
 }
 
-
 atomic-search-box {
   grid-area: search;
   margin: var(--spacing) 0;
@@ -60,7 +59,6 @@ atomic-search-box::part(input) {
 .status {
   grid-area: status;
 }
-
 
 atomic-breadbox {
   grid-area: breadbox;
@@ -107,12 +105,10 @@ atomic-color-facet::part(value-twitter2tweet) {
   background-repeat: no-repeat;
 }
 
-
 atomic-color-facet::part(value-rssitem) {
   background-image: url("https://cdn.cdnlogo.com/logos/r/89/rss.svg");
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 @media only screen and (min-width: 1024px) {
