@@ -114,7 +114,7 @@
         <atomic-did-you-mean></atomic-did-you-mean>
         <atomic-result-list
           fields-to-include="ytlikecount,ytviewcount,ytthumbnailurl,ytviewrating"
-          display="list"
+          display="grid"
           image="small"
         >
           <atomic-result-template>
@@ -132,8 +132,8 @@
                 }
 
                 .thumbnail {
-                  width: 100%;
-                  height: 100%;
+                  width: 200%;
+                  height: 200%;
                 }
 
                 .icon {
@@ -165,11 +165,6 @@
                   height: 100%;
                 }
 
-                .salesforce-badge::part(result-badge-element) {
-                  background-color: #44a1da;
-                  color: white;
-                }
-
                 #youtubevideo-ted::part(result-badge-element) {
                   background-color: red;
                   color: white;
@@ -198,10 +193,7 @@
                   <atomic-result-image
                     field="ytthumbnailurl"
                   ></atomic-result-image>
-                  <img
-                    src="https://cdn.cdnlogo.com/logos/y/92/youtube.svg"
-                    class="small-img"
-                  />
+                  <img src="https://cdn.cdnlogo.com/logos/y/92/youtube.svg" />
                 </atomic-field-condition>
                 <atomic-field-condition must-match-sourcetype="RSS">
                   <img src="https://cdn.cdnlogo.com/logos/r/89/rss.svg" />
