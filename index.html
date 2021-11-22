@@ -29,17 +29,9 @@
       <div class="searchbox">
         <atomic-search-box></atomic-search-box>
       </div>
-      <atomic-facet-manager>
-        <atomic-facet
-          field="source"
-          label="Source"
-          is-collapsed="true"
-        ></atomic-facet>
-        <atomic-facet
-          field="language"
-          label="Language"
-          is-collapsed="true"
-        ></atomic-facet>
+      <atomic-facet-manager collapse-facets-after="0">
+        <atomic-facet field="source" label="Source"></atomic-facet>
+        <atomic-facet field="language" label="Language"></atomic-facet>
         <atomic-timeframe-facet
           label="Timeframe"
           with-date-picker="true"
