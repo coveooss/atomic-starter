@@ -121,10 +121,6 @@ atomic-breadbox {
     margin-bottom: var(--spacing);
   }
 
-  atomic-refine-toggle {
-    display: none;
-  }
-
   atomic-sort-dropdown {
     display: block;
   }
