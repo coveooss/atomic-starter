@@ -58,6 +58,10 @@ atomic-search-box::part(input) {
 
 atomic-facet-manager {
   display: none;
+  border-radius: 20px;
+  margin-top: var(--spacing);
+  background-color: gainsboro;
+  padding: 0.5em;
 }
 
 atomic-breadbox {
