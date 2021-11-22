@@ -19,7 +19,6 @@
           accessToken: "xx29e62e9b-f739-4886-b433-c9326cc1b492",
           organizationId: "docsdemoslhkhaxyy",
         });
-
         searchInterface.executeFirstSearch();
       })();
     </script>
@@ -32,18 +31,6 @@
       <atomic-facet-manager collapse-facets-after="0">
         <atomic-facet field="source" label="Source"></atomic-facet>
         <atomic-facet field="language" label="Language"></atomic-facet>
-        <atomic-timeframe-facet
-          label="Timeframe"
-          with-date-picker="true"
-          is-collapsed="true"
-        >
-          <atomic-timeframe unit="hour"></atomic-timeframe>
-          <atomic-timeframe unit="day"></atomic-timeframe>
-          <atomic-timeframe unit="week"></atomic-timeframe>
-          <atomic-timeframe unit="month"></atomic-timeframe>
-          <atomic-timeframe unit="quarter"></atomic-timeframe>
-          <atomic-timeframe unit="year"></atomic-timeframe>
-        </atomic-timeframe-facet>
       </atomic-facet-manager>
       <div class="topbar">
         <atomic-refine-toggle></atomic-refine-toggle>
@@ -51,11 +38,10 @@
       <div class="results">
         <atomic-result-list
           display="grid"
-          image-size="icon"
+          image-size="small"
           density="compact"
           fields-to-include="ytlikecount,ytviewcount,ytthumbnailurl,ytviewrating"
-        >
-        </atomic-result-list>
+        ></atomic-result-list>
       </div>
       <div class="pagination">
         <atomic-pager></atomic-pager>
