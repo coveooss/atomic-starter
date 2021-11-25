@@ -67,6 +67,7 @@ atomic-facet-manager {
   padding: 1em;
 }
 
+
 atomic-facet-manager > * {
   margin-bottom: var(--spacing);
 }
