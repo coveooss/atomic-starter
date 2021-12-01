@@ -104,7 +104,6 @@ atomic-color-facet::part(value-twitter2tweet) {
   background-repeat: no-repeat;
 }
 
-
 atomic-color-facet::part(value-rssitem) {
   background-image: url("https://cdn.cdnlogo.com/logos/r/89/rss.svg");
   background-position: center;
@@ -126,6 +125,10 @@ atomic-color-facet::part(value-rssitem) {
       ". facets .           .";
   }
 
+  atomic-refine-toggle {
+    display: none;
+  }
+
   atomic-facet-manager {
     display: block;
     border-radius: 20px;
@@ -137,10 +140,6 @@ atomic-color-facet::part(value-rssitem) {
 
   atomic-facet-manager > * {
     margin-bottom: var(--spacing);
-  }
-
-  atomic-refine-toggle {
-    display: none;
   }
 
   atomic-sort-dropdown {
