@@ -108,6 +108,10 @@ atomic-breadbox {
       ". facets .           .";
   }
 
+  atomic-refine-toggle {
+    display: none;
+  }
+
   atomic-facet-manager {
     display: block;
     border-radius: 20px;
@@ -119,10 +123,6 @@ atomic-breadbox {
 
   atomic-facet-manager > * {
     margin-bottom: var(--spacing);
-  }
-
-  atomic-refine-toggle {
-    display: none;
   }
 
   atomic-sort-dropdown {
